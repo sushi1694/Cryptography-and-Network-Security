@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int caesar_cipher(char str[],int key)
+{
+	int i;
+	for(i=0;str[i]!=0;i++)
+	{
+	   if (str[i]>='a'&&str[i]<='z')
+	   
+	   	 str[i]=(str[i]-'a'+key)%26+'a';
+	
+	else if(str[i]>='A'&&str[i]<='Z')
+	
+	  str[i]=(str[i]-'A'+key)%26+'A';
+	
+	
+}
+	
+}
+int main()
+{  
+  char str[100];
+  int key;
+  printf("Enter the string:");
+  scanf("%s",str);
+  printf("Enter the key(1-25):");
+  scanf("%d",&key);
+  
+  caesar_cipher(str,key);
+  printf("cipher:%s\n",str);
+  return 0;
+}
